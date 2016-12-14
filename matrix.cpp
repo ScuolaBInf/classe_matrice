@@ -1,6 +1,6 @@
 //ejofewniogew
 #include<iostream>
-#include"matrix.h"
+#include"matrix.h" 
 using namespace std;
 
 matrix::matrix(int dimY, int dimX, bool iniz)
