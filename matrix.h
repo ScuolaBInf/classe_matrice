@@ -17,6 +17,6 @@ class matrix
 			
 			matrix operator +(matrix m);
 			matrix operator -(matrix m);
-			
 			bool operator ==(matrix m);
+			bool operator !=(matrix m);
 	};

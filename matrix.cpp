@@ -129,3 +129,21 @@ bool matrix::operator ==(matrix m)
 			}
 		return true;
 	}
+	
+bool matrix::operator !=(matrix m)
+	{
+		if (dimX == m.dimX and dimY == m.dimY)
+			{
+				for (int i = 0; i < dimX; i++)
+					{			
+						for (int j = 0; j < dimY; j++)
+							{
+								if (matrice[i][j] != m.matrice[i][j])
+									{
+										return true;
+									}	
+							}
+					}
+			}
+		return false;
+	}
