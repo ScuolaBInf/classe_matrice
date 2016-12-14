@@ -71,43 +71,61 @@ matrix::changeSingleElement(int dimY, int dimX, int value)
 	}
 	
 matrix matrix::operator +(matrix m)
-				{
-					matrix r(dimX, dimY);
-					if (dimX == m.dimX and dimY == m.dimY)
-						{
-							for (int i = 0; i < dimX; i++)
-								{			
-									for (int j = 0; j < dimY; j++)
-										{
-											r.matrice[i][j] = matrice[i][j] + m.matrice[i][j];	
-										}
-								}
-						}
-					else
-						{
-							cout<<"Error";
-						}
-						
-					return r;
-				}
+	{
+		matrix r(dimX, dimY);
+		if (dimX == m.dimX and dimY == m.dimY)
+			{
+				for (int i = 0; i < dimX; i++)
+					{			
+						for (int j = 0; j < dimY; j++)
+							{
+								r.matrice[i][j] = matrice[i][j] + m.matrice[i][j];	
+							}
+					}
+			}
+		else
+			{
+				cout<<"Error";
+			}
+			
+		return r;
+	}
 
 matrix matrix::operator -(matrix m)
-				{
-					matrix r(dimX, dimY);
-					if (dimX == m.dimX and dimY == m.dimY)
-						{
-							for (int i = 0; i < dimX; i++)
-								{			
-									for (int j = 0; j < dimY; j++)
-										{
-											r.matrice[i][j] = matrice[i][j] - m.matrice[i][j];	
-										}
-								}
-						}
-					else
-						{
-							cout<<"Error";
-						}
-						
-					return r;
-				}
+	{
+		matrix r(dimX, dimY);
+		if (dimX == m.dimX and dimY == m.dimY)
+			{
+				for (int i = 0; i < dimX; i++)
+					{			
+						for (int j = 0; j < dimY; j++)
+							{
+								r.matrice[i][j] = matrice[i][j] - m.matrice[i][j];	
+							}
+					}
+			}
+		else
+			{
+				cout<<"Error";
+			}
+			
+		return r;
+	}
+				
+bool matrix::operator ==(matrix m)
+	{
+		if (dimX == m.dimX and dimY == m.dimY)
+			{
+				for (int i = 0; i < dimX; i++)
+					{			
+						for (int j = 0; j < dimY; j++)
+							{
+								if (matrice[i][j] != m.matrice[i][j])
+									{
+										return false;
+									}	
+							}
+					}
+			}
+		return true;
+	}
